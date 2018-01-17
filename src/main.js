@@ -1,11 +1,11 @@
 import './assets/js/third/zepto.fullpage.min';
 import audioUtils from './utils/audioUtils';
 import deviceUtils from './utils/deviceUtils';
-import wx from './assets/js/third/jweixin-1.2.0';
+import vibrationUtils from './utils/vibrationUtils';
 
 var Mars = {
   resetHeightClass: '.sl-page-reset',
-  init: function({ signature }){
+  init: function({ signature, vibrateCallback }){
     this.initFullPagePlugin();//初始化全屏控件
     this.initAudioPlayer({//初始化音频控件
       src: 'https://activity-res.imeihao.shop/bath/bg.mp3',
@@ -16,6 +16,9 @@ var Mars = {
 
     if(signature){
       this.initSignature();
+    }
+    if(vibrateCallback && typeof vibrateCallback == 'function'){
+      vibrationUtils.bindEvent(vibrateCallback);
     }
   },
   initFullPagePlugin: function(){
@@ -128,7 +131,10 @@ var Mars = {
 
 
 Mars.init({
-  signature: {}
+  signature: {},
+  vibrateCallback: function(){
+    window.alert('震动啦');
+  }
 });
 
 Mars.setShareInfo({});
