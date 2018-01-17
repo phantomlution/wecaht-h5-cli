@@ -1,0 +1,19 @@
+{
+  "name": "wecaht-h5-cli",
+  "version": "0.1.0",
+  "description": "微信h5活动页的工具链",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phantomlution/wecaht-h5-cli.git"
+  },
+  "author": "phantomlution",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phantomlution/wecaht-h5-cli/issues"
+  },
+  "homepage": "https://github.com/phantomlution/wecaht-h5-cli#readme"
+}
