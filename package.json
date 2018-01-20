@@ -4,7 +4,7 @@
   "description": "微信h5活动页的工具链",
   "main": "main.js",
   "scripts": {
-    "dev": "parcel index.html"
+    "dev": "rm -rf .cache && rm -rf ./dist && parcel index.html"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,10 @@
   "homepage": "https://github.com/phantomlution/wecaht-h5-cli#readme",
   "devDependencies": {
     "babel-preset-env": "^1.6.1",
-    "parcel-bundler": "^1.4.1"
+    "parcel-bundler": "^1.4.1",
+    "posthtml-expressions": "^1.1.0",
+    "posthtml-include": "^1.1.0",
+    "posthtml-modules": "^0.4.2"
   },
   "dependencies": {
     "zepto": "^1.2.0"
